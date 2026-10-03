@@ -4,6 +4,19 @@ Customer documentation for the two Roblox Studio plugins by **hkd0226**.
 These instructions apply to **version 0.1.0**. Version 0.2.0 is an unreleased candidate;
 its new features are not available in the current store plugins.
 
+### 0.2.0 candidate guides / 0.2.0 출시 전 안내
+
+The store version is still **0.1.0**. These separate guides describe the unreleased
+0.2.0 candidates; they do not change the 0.1.0 instructions below or announce a release.
+Viewport's revised saved-frame handling still requires fresh release checks.
+
+현재 판매판은 **0.1.0**입니다. 아래 문서는 미출시 0.2.0 후보용이며, 아래 0.1.0 안내를
+바꾸거나 출시 완료를 알리는 문서가 아닙니다.
+Viewport의 저장된 프레임 처리 수정본은 새 출시 검수가 아직 필요합니다.
+
+- [Clearance Check 0.2.0 — English / 한국어](clearance-check-0.2.0.md)
+- [Viewport Batch Builder 0.2.0 — English / 한국어](viewport-batch-builder-0.2.0.md)
+
 **[English](#english) · [한국어](#한국어)**
 
 ## English
