@@ -1,17 +1,16 @@
 # Clearance Check — Door and Passage 0.2.0
 
-**Release candidate guide / 출시 전 안내**
+**Current release guide / 현재 출시판 안내 — 0.2.0**
 
-The Creator Store currently offers **0.1.0**. Version **0.2.0 is not released yet**.
-This guide describes the 0.2.0 candidate; edited-pivot hinges and collision-group
-selection are not features of the current 0.1.0 store version. Release checks are
-still in progress. Follow this guide only after confirming that your installed
-plugin shows **DOOR + PASSAGE / 0.2.0**.
+This guide is for **0.2.0**. Confirm your installed plugin shows
+**DOOR + PASSAGE / 0.2.0** before following it. New in 0.2.0: **edited Part-pivot
+hinges** and **selection of existing collision groups**. Edge hinges, Clear/Cancel
+and the built-in 2-zone example remain available from the earlier version.
 
-현재 Creator Store 판매판은 **0.1.0**이며 **0.2.0은 아직 출시 전**입니다.
-이 문서는 0.2.0 후보의 사용법입니다. 편집한 pivot 경첩과 충돌 그룹 선택은 현재
-0.1.0 판매판 기능이 아닙니다. 출시 검수가 진행 중이므로 설치한 패널에
-**DOOR + PASSAGE / 0.2.0**이 표시되는지 확인한 뒤 이 안내를 사용하세요.
+이 문서는 **0.2.0** 사용법입니다. 설치한 패널에 **DOOR + PASSAGE / 0.2.0**이
+표시되는지 먼저 확인하세요. 0.2.0의 새 기능은 **편집한 Part pivot 경첩**과
+**기존 충돌 그룹 선택**입니다. 가장자리 경첩, Clear/Cancel과 내장 2구역 예제는
+이전 버전부터 제공하던 기능입니다.
 
 [Creator Store product](https://create.roblox.com/store/asset/132141689341950/Clearance-Check-Door-and-Passage)
 · Asset **132141689341950** · Listed price **US$4.99**
@@ -115,9 +114,9 @@ Changes to selected Parts during inspection can stop the scan; stabilize the sce
 | Error needs more detail | Read Studio Output and include the error text when contacting support. Do not use an old report as a successful new scan. |
 
 Use normal Studio Undo for scene edits and example creation. Keep a separate place
-backup for recovery. If you need to revert a candidate installation, disable/remove
-it through Studio's plugin management and return to the released plugin; keep your
-place backup and verify the displayed version before continuing.
+backup for recovery. If you need to disable an installation, use Studio's plugin
+management. Restore from your place backup if needed, and verify the displayed
+plugin version before continuing.
 
 ### Support
 
@@ -224,8 +223,8 @@ Terrain, 선택한 가이드, 비충돌 장애물, `CanQuery` 또는 선택 그�
 | 오류의 추가 정보가 필요함 | Studio Output의 문구를 확인해 문의에 포함합니다. 예전 보고서를 새 검사의 성공 결과로 사용하지 않습니다. |
 
 장면 편집과 예제 생성은 일반 Studio Undo로 되돌리고, 별도 place 백업을 보관하세요.
-후보 설치를 되돌려야 하면 Studio 플러그인 관리에서 비활성화·제거하고 출시판으로
-돌아갑니다. place 백업을 유지하고 표시된 버전을 확인한 뒤 작업을 계속하세요.
+설치를 비활성화·제거해야 하면 Studio 플러그인 관리를 이용하세요. 필요하면 place
+백업으로 복구하고 표시된 플러그인 버전을 확인한 뒤 작업을 계속하세요.
 
 ### 문의
 

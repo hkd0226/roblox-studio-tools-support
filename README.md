@@ -1,21 +1,33 @@
 # Roblox Studio Tools — Support / 사용 안내 및 문의
 
 Customer documentation for the two Roblox Studio plugins by **hkd0226**.
-These instructions apply to **version 0.1.0**. Version 0.2.0 is an unreleased candidate;
-its new features are not available in the current store plugins.
 
-### 0.2.0 candidate guides / 0.2.0 출시 전 안내
+## Current release: 0.2.0 / 현재 출시판: 0.2.0
 
-The store version is still **0.1.0**. These separate guides describe the unreleased
-0.2.0 candidates; they do not change the 0.1.0 instructions below or announce a release.
-Viewport's revised saved-frame handling still requires fresh release checks.
+Use these **0.2.0** guides for the current plugin workflows. Confirm the installed
+panel displays 0.2.0, and check Roblox for the current price and availability.
+Clearance adds edited Part-pivot hinges and existing collision-group selection.
+Viewport adds named local presets, loading a generated frame's settings and
+regenerating one frame, including normal saved frames with an empty CurrentCamera
+reference. The guides explain supported inputs, manual examples and limits.
 
-현재 판매판은 **0.1.0**입니다. 아래 문서는 미출시 0.2.0 후보용이며, 아래 0.1.0 안내를
-바꾸거나 출시 완료를 알리는 문서가 아닙니다.
-Viewport의 저장된 프레임 처리 수정본은 새 출시 검수가 아직 필요합니다.
+현재 **0.2.0** 사용 순서는 아래 안내를 참고하세요. 설치한 패널의 버전과 Roblox의
+현재 가격·판매 가능 여부를 확인합니다. Clearance는 편집한 Part pivot 경첩과 기존
+충돌 그룹 선택을 추가했습니다. Viewport는 이름 있는 로컬 프리셋, 생성된 프레임의
+설정 불러오기와 개별 갱신을 추가했으며, 저장 후 CurrentCamera 참조가 비어 있는
+정상 프레임도 처리합니다. 지원 입력·직접 만드는 예제·제한은 각 가이드에 있습니다.
 
 - [Clearance Check 0.2.0 — English / 한국어](clearance-check-0.2.0.md)
 - [Viewport Batch Builder 0.2.0 — English / 한국어](viewport-batch-builder-0.2.0.md)
+
+## Legacy 0.1.0 instructions / 이전 0.1.0 사용법
+
+The English and Korean sections below retain **0.1.0** instructions for older
+installations and release history. They do not describe the current 0.2.0 workflows;
+use the linked guides above for 0.2.0. Contact details remain the same for both versions.
+
+아래 영어·한국어 내용은 이전 설치판과 이력 확인을 위한 **0.1.0** 사용법입니다.
+현재 0.2.0 사용 순서는 위 가이드를 이용하세요. 문의 주소는 두 버전 모두 같습니다.
 
 **[English](#english) · [한국어](#한국어)**
 
@@ -81,7 +93,7 @@ place backup before trying a new workflow and stop Play before using these edit 
 - Results are not exact mesh/union collision, avatar walkability, pathfinding, or a
   constraint/physics simulation. A green result does not guarantee player passage.
 - Version 0.1.0 uses edge hinges and Default-group queries. Edited-pivot hinges and a
-  collision-group selector are not in the current released version.
+  collision-group selector are not in version 0.1.0; use the 0.2.0 guide for those features.
 - The plugin does not move or delete your original scene geometry. Example creation
   adds example objects and is intended to be removable with Studio Undo.
 
@@ -167,8 +179,8 @@ source code or downloadable plugin releases.
 
 현재 가격과 판매 가능 여부는 Roblox 상품 페이지에서 확인해 주세요. 구매한 플러그인을
 Studio에서 설치하고 **Plugins** 탭의 제품 버튼으로 엽니다. 작업 파일을 별도로 백업하고
-Play를 중지한 편집 모드에서 사용해 주세요. 이 문서는 현재 **0.1.0**용입니다.
-**0.2.0은 아직 출시하지 않은 후보 버전**이며 아래 사용법에 새 기능을 포함하지 않았습니다.
+Play를 중지한 편집 모드에서 사용해 주세요. 아래 사용법은 이전 **0.1.0**용입니다.
+현재 **0.2.0**의 새 기능과 사용 순서는 페이지 위의 두 가이드를 참고하세요.
 
 ### Clearance Check 0.1.0 — 처음 사용
 
@@ -199,7 +211,7 @@ Play를 중지한 편집 모드에서 사용해 주세요. 이 문서는 현재 
   때문에 실제로는 부딪히지 않는 대상도 보고될 수 있으므로 Studio에서 확인하세요.
 - 정밀 mesh/union 충돌, 아바타 통과, pathfinding, constraint/물리 시뮬레이션 검사가
   아닙니다. 초록 결과가 플레이어 통과를 보장하지는 않습니다.
-- 현재 0.1.0에는 편집한 pivot을 쓰는 경첩과 충돌 그룹 선택 기능이 없습니다.
+- 이전 0.1.0에는 편집한 pivot을 쓰는 경첩과 충돌 그룹 선택 기능이 없습니다.
 - 원본 장면의 형상을 이동하거나 삭제하지 않습니다. 예제 생성은 새 예제 객체를
   추가하며 Studio Undo로 제거하도록 구성되어 있습니다.
 
@@ -215,7 +227,7 @@ Play를 중지한 편집 모드에서 사용해 주세요. 이 문서는 현재 
 5. 결과 프레임을 **ScreenGui / Frame** 안으로 복사하거나 이동합니다. 예를 들어
    StarterGui의 인벤토리 UI에 넣습니다. ReplicatedStorage에 있는 결과는 게임 UI에
    자동 표시되지 않습니다. 실제 UI에서 배치·크기·표시 상태를 확인하세요.
-6. 원본을 수정했다면 새 배치를 생성해 필요한 출력을 직접 교체합니다. 현재 0.1.0에는
+6. 원본을 수정했다면 새 배치를 생성해 필요한 출력을 직접 교체합니다. 이전 0.1.0에는
    이름을 붙여 저장하는 프리셋이나 프레임 한 개만 다시 생성하는 기능이 없습니다.
 
 **범위와 제한**

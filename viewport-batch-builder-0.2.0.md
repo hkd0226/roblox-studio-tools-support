@@ -1,21 +1,18 @@
 # Viewport Batch Builder 0.2.0
 
-**Release candidate guide / 출시 전 안내**
+**Current release guide / 현재 출시판 안내 — 0.2.0**
 
-The Creator Store currently offers **0.1.0**. Version **0.2.0 is not released yet**.
-This guide describes the 0.2.0 candidate. Named presets, loading a frame's saved
-settings and regenerating one frame are not features of the current 0.1.0 store
-version. This candidate includes revised handling for saved frames after reopening.
-Full Studio restart/regeneration and final game-interface checks remain pending
-for this revision. Confirm the panel shows **v0.2.0**
-before following this guide.
+This guide is for **0.2.0**. Confirm the installed panel shows **v0.2.0**.
+It adds named local presets, loading a generated frame's saved settings and
+regenerating one frame. Normal saved frames with an empty CurrentCamera reference
+are supported; keep their PreviewCamera and PreviewWorld children. Use the manual
+two-Part example below and check each report and the resulting game interface.
 
-현재 Creator Store 판매판은 **0.1.0**이며 **0.2.0은 아직 출시 전**입니다.
-이 문서는 0.2.0 후보의 사용법입니다. 이름 있는 프리셋, 프레임 설정 불러오기,
-프레임 한 개 갱신은 현재 0.1.0 판매판 기능이 아닙니다. 이번 후보는 재열기 후 저장된
-프레임 처리를 수정했습니다. 이 수정본의 전체 Studio 재시작 후 갱신과
-최종 게임 UI 검수는 아직 미완료입니다. 패널에 **v0.2.0**이
-표시되는지 확인한 뒤 이 안내를 사용하세요.
+이 문서는 **0.2.0** 사용법입니다. 설치한 패널에 **v0.2.0**이 표시되는지 확인하세요.
+이름 있는 로컬 프리셋, 생성된 프레임의 설정 불러오기와 개별 갱신을 추가했습니다.
+저장 후 CurrentCamera 참조가 비어 있는 정상 프레임도 처리합니다. PreviewCamera와
+PreviewWorld 자식 객체는 유지하세요. 아래 두 Part 예제를 직접 만들고 각 보고서와
+최종 게임 UI를 확인합니다.
 
 [Creator Store product](https://create.roblox.com/store/asset/71263242408985/Viewport-Batch-Builder)
 · Asset **71263242408985** · Listed price **US$4.99**
@@ -35,8 +32,8 @@ animation, runtime turntable or live synchronization** with the source.
 ### Try two simple Parts — no extra download
 
 Create this example manually with built-in Studio objects in a separate empty place.
-It needs no downloaded sample, scripts or Command Bar code. These steps are for the
-0.2.0 candidate; they are not a claim that the revised UI workflow has passed release checks.
+It needs no downloaded sample, scripts or Command Bar code. Follow these steps with
+an installed 0.2.0 plugin and inspect the actual result at each step.
 
 1. Stop Play. Insert two **Part** objects directly under **Workspace** and set these
    properties in Studio. Keep **Shape = Block**, **Anchored = true**, **Archivable = true**
@@ -117,10 +114,10 @@ stop after the current source; a cancelled batch does not save its new staged ou
 
 Presets use this plugin's **local Studio settings on the same computer**. They are
 not embedded in the place or synchronized through this tool to another computer or
-account. Saving and restoring `Pilot_A` after a full restart were observed with the
-previous candidate. Fresh checks of this revised candidate remain pending. To try restoration,
-reopen Studio and use **Choose saved preset → Load chosen preset**. Keep a written
-copy of important settings when changing computers or reinstalling the plugin.
+account. A saved place does not back up these local settings. To check restoration
+on your installation, reopen Studio and use **Choose saved preset → Load chosen
+preset**. Keep a written copy of important settings when changing computers or
+reinstalling the plugin.
 
 Up to **20** presets are supported. Trimmed names must use **1–80 UTF-8 bytes**,
 with no control characters or backslash; Korean characters can use several bytes.
@@ -149,10 +146,9 @@ PreviewWorld, PreviewCamera or VBBSourceReference children.
 
 After saving and reopening a place, Studio can display a static card with its
 `CurrentCamera` reference empty. Preserve its PreviewCamera and PreviewWorld children.
-This candidate accepts that normal saved state for regeneration and still rejects
-a different camera reference. Actual reopened-frame regeneration, Undo/Redo and
-rendering checks for this revision remain pending; an empty reference alone is not
-proof that the preview structure is damaged.
+Version 0.2.0 accepts that normal saved state for regeneration and still rejects
+a different camera reference. An empty reference alone is not proof that the
+preview structure is damaged.
 
 An older 0.1.0 frame may not have stored settings or a source reference. Choose a
 preset or set the controls yourself, and supply the original source as below.
@@ -208,9 +204,10 @@ The tool is an edit-time static preview builder, not a game inventory system.
 | Saved preset unavailable | Close other Studio windows and retry; do not overwrite known presets while a read/save error is shown. |
 
 Use normal Studio Undo and a saved place backup rather than relying on Undo alone.
-To revert a candidate installation, disable/remove it in Studio's plugin management
-and return to the released plugin. Local preset settings are separate from a place
-backup; keep a written copy before switching machines or reinstalling.
+If you need to disable/remove an installation, use Studio's plugin management.
+Restore your place backup if needed and verify the plugin version before continuing.
+Local preset settings are separate from a place backup; keep a written copy before
+switching machines or reinstalling.
 
 ### Support
 
@@ -236,8 +233,8 @@ checkout or billing problems should also be raised with Roblox Support.
 ### 두 표준 Part로 따라 하기 — 추가 다운로드 없음
 
 별도의 빈 place에서 Studio 기본 객체로 직접 만드는 예제입니다. 샘플 다운로드,
-스크립트나 Command Bar 코드는 필요하지 않습니다. 아래는 0.2.0 후보용 사용 순서이며,
-이 수정본의 실제 화면 검수가 완료됐다는 뜻은 아닙니다.
+스크립트나 Command Bar 코드는 필요하지 않습니다. 설치한 0.2.0 플러그인으로
+아래 순서를 따라 하며 단계마다 실제 결과를 확인하세요.
 
 1. Play를 중지하고 **Workspace 바로 아래에 Part 두 개**를 추가해 속성을 설정합니다.
    둘 다 **Shape = Block**, **Anchored = true**, **Archivable = true**,
@@ -317,10 +314,10 @@ checkout or billing problems should also be raised with Roblox Support.
    삭제는 이름을 고르고 **Delete chosen preset**을 누릅니다. 생성된 프레임은 삭제하지 않습니다.
 
 프리셋은 **같은 컴퓨터의 플러그인용 로컬 Studio 설정**에 저장합니다. place에 포함되지
-않고, 이 도구가 다른 컴퓨터나 계정으로 동기화하지 않습니다. 이전 후보에서는 `Pilot_A`
-저장과 전체 Studio 재시작 후 불러오기를 확인했습니다. 이번 수정본의 새 검수는 아직 미완료입니다.
-복원을 확인할 때는 다시 연 Studio에서 **Choose saved preset → Load chosen preset**을
-사용하세요. 컴퓨터 변경이나 재설치 전 중요한 설정값은 따로 적어 두세요.
+않고, 이 도구가 다른 컴퓨터나 계정으로 동기화하지 않습니다. place 저장은 이 로컬
+설정의 백업이 아닙니다. 사용 중인 설치판에서 복원을 확인하려면 Studio를 다시 열고
+**Choose saved preset → Load chosen preset**을 사용하세요. 컴퓨터 변경이나 재설치 전
+중요한 설정값은 따로 적어 두세요.
 
 최대 **20개**이며, 앞뒤 공백을 뺀 이름은 **UTF-8 1–80바이트**입니다. 제어 문자와
 역슬래시는 사용할 수 없고, 한글은 글자당 여러 바이트를 사용할 수 있습니다.
@@ -347,10 +344,9 @@ UI 장식 자식 객체와 사용자가 추가한 속성도 보존합니다. 표
 이름 변경·교체·중복 생성하지 않는 것이 좋습니다.
 
 place를 저장하고 다시 열면 정적 카드가 표시되더라도 `CurrentCamera` 참조가 비어 있을
-수 있습니다. PreviewCamera와 PreviewWorld 자식 객체는 유지하세요. 이번 후보는 이 정상
-저장 상태에서 갱신을 허용하며 관계없는 카메라 참조는 계속 거부합니다. 이 수정본의 실제
-재열기 후 갱신·Undo/Redo·화면 표시 검수는 아직 미완료입니다. 참조가 비어 있다는 이유만으로
-표시 구조가 손상됐다고 판단하지 마세요.
+수 있습니다. PreviewCamera와 PreviewWorld 자식 객체는 유지하세요. 0.2.0은 이 정상
+저장 상태에서 갱신을 허용하며 관계없는 카메라 참조는 계속 거부합니다. 참조가 비어 있다는
+이유만으로 표시 구조가 손상됐다고 판단하지 마세요.
 
 0.1.0에서 만든 프레임은 저장된 설정이나 원본 참조가 없을 수 있습니다. 프리셋 또는
 직접 입력값을 사용하고 아래 방법으로 원본을 함께 선택하세요.
@@ -404,9 +400,10 @@ place를 저장하고 다시 열면 정적 카드가 표시되더라도 `Current
 | Undo 작업 중 또는 갱신 오류 | Studio의 다른 작업이 끝난 뒤 오류를 읽고 입력을 고쳐 재시도합니다. place 백업을 유지하세요. |
 | 프리셋 읽기·저장 오류 | 다른 Studio 창을 닫고 재시도하며 오류 중에는 알고 있는 프리셋을 덮어쓰지 않습니다. |
 
-일반 Studio Undo와 place 백업을 함께 사용하세요. 후보 설치를 되돌릴 때는 플러그인 관리에서
-비활성화·제거한 뒤 출시판으로 돌아갑니다. 로컬 프리셋은 place 백업과 별개이므로 컴퓨터
-변경이나 재설치 전 중요한 설정값을 따로 적어 두세요.
+일반 Studio Undo와 place 백업을 함께 사용하세요. 설치를 비활성화·제거해야 하면 플러그인
+관리를 이용합니다. 필요하면 place 백업으로 복구하고 플러그인 버전을 확인한 뒤 계속하세요.
+로컬 프리셋은 place 백업과 별개이므로 컴퓨터 변경이나 재설치 전 중요한 설정값을 따로
+적어 두세요.
 
 ### 문의
 
