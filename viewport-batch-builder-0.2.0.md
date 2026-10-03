@@ -253,13 +253,13 @@ checkout or billing problems should also be raised with Roblox Support.
 3. **StarterGui**에 **VBBExampleGui**라는 **ScreenGui**를 추가하고
    **Enabled = true**, **ResetOnSpawn = false**로 설정합니다. 그 아래 **Cards**라는
    **Frame**을 추가해 **Visible = true**, **BackgroundTransparency = 1**로 설정합니다.
-   Cards의 **Size = {0, 544}, {0, 256}**, **Position = {0, 24}, {0, 80}**으로 둡니다.
+   Cards의 **Size = {0, 544}, {0, 256}**, **Position = {0, 24}, {0, 80}** 으로 둡니다.
    scale 값은 모두 0이며 나머지 숫자는 픽셀 offset입니다.
 4. 생성된 ReplicatedStorage 폴더에서 **Sample_RedBlock_Viewport**와
    **Sample_BlueBlock_Viewport**를 Cards 아래로 옮기고 내부 자식 객체를 유지합니다.
    두 카드의 **Size = {0, 256}, {0, 256}**, **Visible = true**,
    **LayoutOrder = 1 / 2**로 설정합니다. 빨간 카드는 **Position = {0, 0}, {0, 0}**,
-   파란 카드는 **Position = {0, 288}, {0, 0}**으로 둡니다. 빨간 카드 아래에
+   파란 카드는 **Position = {0, 288}, {0, 0}** 으로 둡니다. 빨간 카드 아래에
    **KeepStroke**라는 **UIStroke**를 추가하고 **Thickness = 2**, **Enabled = true**,
    **Transparency = 0**, **Color = 255, 220, 70**으로 둡니다. Camera와 WorldModel을
    다른 객체로 교체하지 마세요.

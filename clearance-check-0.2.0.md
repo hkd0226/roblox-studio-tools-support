@@ -143,9 +143,9 @@ checkout or billing problems should also be raised with Roblox Support.
 ### 통로 검사 처음 사용
 
 1. place를 별도 파일로 백업하고 Play를 중지합니다. Plugins 탭의 **Clearance**를 엽니다.
-2. 테스트 place에서 **Create 2-zone example (Undo supported)**을 누릅니다.
+2. 테스트 place에서 **Create 2-zone example (Undo supported)** 을 누릅니다.
    통로 가이드 Part 두 개와 장애물 하나가 추가됩니다. 선택된 가이드 두 개를 유지합니다.
-3. **Mode: Passage**, **Margin `0`**으로 **Inspect selection**을 실행합니다.
+3. **Mode: Passage**, **Margin `0`** 으로 **Inspect selection**을 실행합니다.
    예제 한 구역에는 장애물이 있고, 다른 구역은 이 검사에서 의심 대상이 없습니다.
 4. 색상과 보고서를 함께 읽습니다. **Select suspect parts**로 보고된 장애물을 선택할
    수 있고, 보고서 텍스트를 선택해 복사할 수 있습니다.
@@ -179,7 +179,7 @@ checkout or billing problems should also be raised with Roblox Support.
 
 ### 충돌 그룹과 제외 대상
 
-**Collision group: … (click to change)**를 눌러 place에 이미 등록된 그룹을 선택합니다.
+**Collision group: … (click to change)** 를 눌러 place에 이미 등록된 그룹을 선택합니다.
 선택한 그룹은 **검사 쿼리의 그룹**이며, 그 그룹의 충돌 관계로 장애물을 걸러냅니다.
 원본 Part의 그룹을 바꾸거나 새 그룹을 만들지 않습니다. Studio의 Collision Groups
 편집기에서 그룹과 관계를 먼저 설정하세요. 그룹이 삭제됐으면 유효한 그룹을 선택해 다시 검사합니다.
