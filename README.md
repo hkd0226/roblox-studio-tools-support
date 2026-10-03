@@ -159,8 +159,9 @@ Play를 중지한 편집 모드에서 사용해 주세요. 이 문서는 현재 
 
 ### Clearance Check 0.1.0 — 처음 사용
 
-1. **Clearance** 버튼으로 패널을 열고 테스트 place에서 **Create 2-zone example
-   (Undo supported)**을 누릅니다. 통로 가이드 Part 두 개와 장애물 하나가 생성됩니다.
+1. **Clearance** 버튼으로 패널을 열고 테스트 place에서
+   **Create 2-zone example (Undo supported)** 버튼을 누릅니다.
+   통로 가이드 Part 두 개와 장애물 하나가 생성됩니다.
 2. 선택된 두 Part를 유지하고 **Mode: Passage → Inspect selection**을 실행합니다.
    빨간 경계는 의심 대상이 있으며, 초록 경계는 이 쿼리에서 찾은 의심 대상이 없습니다.
    **Select suspect parts**로 보고된 대상을 선택해 확인합니다.
@@ -176,7 +177,8 @@ Play를 중지한 편집 모드에서 사용해 주세요. 이 문서는 현재 
 **범위와 제한**
 
 - 입력은 Model/MeshPart가 아닌 직사각형 block `Part`입니다. 각 크기는 최대
-  **500 studs**, 문 각도는 **−180~−1 또는 1~180도**, 여유는 **0~10 studs**입니다.
+  **500 studs**, 문 각도는 **−180도부터 −1도 또는 1도부터 180도**,
+  여유는 **0–10 studs** 범위입니다.
 - **Default 충돌 그룹 관계**와 `CanQuery`를 사용합니다. Terrain, `CanQuery=false`,
   비충돌 장애물, 선택한 가이드, 자신이나 Workspace 아래 조상에 `ClearanceIgnore=true`가
   있는 대상은 제외합니다. Workspace 자체의 이 속성은 검사하지 않습니다.
@@ -209,7 +211,7 @@ Play를 중지한 편집 모드에서 사용해 주세요. 이 문서는 현재 
   보이는 BasePart가 있어야 합니다. 원본과 형상 자손의 `Archivable=true`가 필요하며,
   꺼져 있으면 오류를 알리고 원본 설정을 자동 변경하지 않습니다.
 - 너비·높이는 정수 **64–1,024**, 비율 **1:4–4:1**, yaw **−180–180도**, pitch
-  **−80–80도**, FOV **10–90도**, margin은 각 가장자리 **0–40%**입니다.
+  **−80–80도**, FOV **10–90도**, margin은 각 가장자리 **0–40%** 범위입니다.
 - 결과는 ViewportFrame 안의 정적 복사본입니다. PNG 내보내기, 애니메이션,
   실행 중 자동 회전이나 원본 변경 자동 동기화 기능은 없습니다.
 - 원본은 수정하지 않습니다. 결과 복사본에서 스크립트와 package link를 제거하고,
