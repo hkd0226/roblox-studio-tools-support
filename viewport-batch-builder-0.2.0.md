@@ -6,14 +6,14 @@ The Creator Store currently offers **0.1.0**. Version **0.2.0 is not released ye
 This guide describes the 0.2.0 candidate. Named presets, loading a frame's saved
 settings and regenerating one frame are not features of the current 0.1.0 store
 version. This candidate includes revised handling for saved frames after reopening.
-Fresh native tests, full Studio restart/regeneration and final game-interface checks
-remain pending for this revision. Confirm the panel shows **v0.2.0**
+Full Studio restart/regeneration and final game-interface checks remain pending
+for this revision. Confirm the panel shows **v0.2.0**
 before following this guide.
 
 현재 Creator Store 판매판은 **0.1.0**이며 **0.2.0은 아직 출시 전**입니다.
 이 문서는 0.2.0 후보의 사용법입니다. 이름 있는 프리셋, 프레임 설정 불러오기,
 프레임 한 개 갱신은 현재 0.1.0 판매판 기능이 아닙니다. 이번 후보는 재열기 후 저장된
-프레임 처리를 수정했습니다. 이 수정본의 새 엔진 검수, 전체 Studio 재시작 후 갱신과
+프레임 처리를 수정했습니다. 이 수정본의 전체 Studio 재시작 후 갱신과
 최종 게임 UI 검수는 아직 미완료입니다. 패널에 **v0.2.0**이
 표시되는지 확인한 뒤 이 안내를 사용하세요.
 
@@ -31,6 +31,53 @@ Build native, static **ViewportFrames** from selected Models or BaseParts for
 inventory and shop UI. The camera fits visible geometry using the selected frame
 aspect ratio, view and margin. The output is a static clone: there is **no PNG export,
 animation, runtime turntable or live synchronization** with the source.
+
+### Try two simple Parts — no extra download
+
+Create this example manually with built-in Studio objects in a separate empty place.
+It needs no downloaded sample, scripts or Command Bar code. These steps are for the
+0.2.0 candidate; they are not a claim that the revised UI workflow has passed release checks.
+
+1. Stop Play. Insert two **Part** objects directly under **Workspace** and set these
+   properties in Studio. Keep **Shape = Block**, **Anchored = true**, **Archivable = true**
+   and **Transparency = 0** for both.
+
+   | Name | Size (X, Y, Z) | Position (X, Y, Z) | Color (RGB) |
+   | --- | --- | --- | --- |
+   | Sample_RedBlock | 2, 3, 1 | 0, 4, 0 | 220, 70, 70 |
+   | Sample_BlueBlock | 1, 2, 3 | 5, 4, 0 | 60, 90, 220 |
+
+2. Select both original Parts. In **Viewport Batch**, set width/height **256 / 256**,
+   yaw **35**, pitch **20**, FOV **35**, margin **10%**, lighting **Soft** and background
+   **Dark**. Click **Preview first selected model** and check that the selected first
+   block appears. Click **Generate batch**. Check the actual report for **2 created,
+   0 skipped**; if it differs, read the warning and correct the input before continuing.
+3. Under **StarterGui**, insert a **ScreenGui** named **VBBExampleGui** with
+   **Enabled = true** and **ResetOnSpawn = false**. Under it, insert a **Frame** named
+   **Cards**, with **Visible = true** and **BackgroundTransparency = 1**.
+   Set Cards **Size = {0, 544}, {0, 256}** and **Position = {0, 24}, {0, 80}**
+   (all scale components are zero; the numbers are pixel offsets).
+4. Move **Sample_RedBlock_Viewport** and **Sample_BlueBlock_Viewport** from the generated
+   ReplicatedStorage folder into Cards, keeping each frame's existing children.
+   Set both **Size = {0, 256}, {0, 256}**, **Visible = true** and **LayoutOrder = 1 / 2**.
+   Set the red card **Position = {0, 0}, {0, 0}** and blue card
+   **Position = {0, 288}, {0, 0}**. Insert a **UIStroke** named **KeepStroke** under the
+   red card, with **Thickness = 2**, **Enabled = true**, **Transparency = 0** and
+   **Color = 255, 220, 70**. Do not replace the preview Camera or WorldModel.
+5. In Workspace, change only the original Sample_RedBlock **Color** to **70, 220, 90**.
+   Its existing card should remain red until you explicitly regenerate it. Select
+   only Sample_RedBlock_Viewport, click **Load settings from selected frame**, then
+   **Regenerate selected frame only**. Inspect the green block and check that the blue
+   card, both card positions/sizes, red-card LayoutOrder and KeepStroke remain intact.
+6. Use Studio **Edit → Undo** to compare the red card, then **Redo** to compare the
+   green card. Check the unchanged sibling and stroke at each step. Save the example
+   as a separate local place, close it and reopen it. Keep PreviewCamera/PreviewWorld
+   even if CurrentCamera is empty. With the red card selected, load its settings and
+   regenerate again; inspect the result. Stop if any step reports an error.
+7. Start **Play** and check that both cards render side by side in the game UI, with
+   the green/red card state you chose and the blue sibling/stroke retained. Stop Play
+   before further plugin operations. Use your backup for recovery; do not assume a
+   successful report alone proves the final interface looks right.
 
 ### First batch
 
@@ -185,6 +232,54 @@ checkout or billing problems should also be raised with Roblox Support.
 선택한 Model 또는 BasePart로 인벤토리·상점 UI용 정적 **ViewportFrame**을 만듭니다.
 프레임 비율·시점·margin에 맞춰 보이는 형상을 카메라에 담습니다. 결과는 정적 복사본이며
 **PNG 내보내기, 애니메이션, 실행 중 자동 회전, 원본 변경 자동 동기화는 없습니다.**
+
+### 두 표준 Part로 따라 하기 — 추가 다운로드 없음
+
+별도의 빈 place에서 Studio 기본 객체로 직접 만드는 예제입니다. 샘플 다운로드,
+스크립트나 Command Bar 코드는 필요하지 않습니다. 아래는 0.2.0 후보용 사용 순서이며,
+이 수정본의 실제 화면 검수가 완료됐다는 뜻은 아닙니다.
+
+1. Play를 중지하고 **Workspace 바로 아래에 Part 두 개**를 추가해 속성을 설정합니다.
+   둘 다 **Shape = Block**, **Anchored = true**, **Archivable = true**,
+   **Transparency = 0**으로 둡니다.
+
+   | Name | Size (X, Y, Z) | Position (X, Y, Z) | Color (RGB) |
+   | --- | --- | --- | --- |
+   | Sample_RedBlock | 2, 3, 1 | 0, 4, 0 | 220, 70, 70 |
+   | Sample_BlueBlock | 1, 2, 3 | 5, 4, 0 | 60, 90, 220 |
+
+2. 원본 Part 두 개를 선택합니다. **Viewport Batch**에서 너비·높이 **256 / 256**,
+   yaw **35**, pitch **20**, FOV **35**, margin **10%**, 조명 **Soft**, 배경 **Dark**로
+   설정합니다. **Preview first selected model**에서 먼저 선택된 블록을 확인한 뒤
+   **Generate batch**를 누릅니다. 실제 보고서의 **생성 2개, 건너뜀 0개**를 확인합니다.
+   다르면 경고를 읽고 입력을 고친 뒤 계속하세요.
+3. **StarterGui**에 **VBBExampleGui**라는 **ScreenGui**를 추가하고
+   **Enabled = true**, **ResetOnSpawn = false**로 설정합니다. 그 아래 **Cards**라는
+   **Frame**을 추가해 **Visible = true**, **BackgroundTransparency = 1**로 설정합니다.
+   Cards의 **Size = {0, 544}, {0, 256}**, **Position = {0, 24}, {0, 80}**으로 둡니다.
+   scale 값은 모두 0이며 나머지 숫자는 픽셀 offset입니다.
+4. 생성된 ReplicatedStorage 폴더에서 **Sample_RedBlock_Viewport**와
+   **Sample_BlueBlock_Viewport**를 Cards 아래로 옮기고 내부 자식 객체를 유지합니다.
+   두 카드의 **Size = {0, 256}, {0, 256}**, **Visible = true**,
+   **LayoutOrder = 1 / 2**로 설정합니다. 빨간 카드는 **Position = {0, 0}, {0, 0}**,
+   파란 카드는 **Position = {0, 288}, {0, 0}**으로 둡니다. 빨간 카드 아래에
+   **KeepStroke**라는 **UIStroke**를 추가하고 **Thickness = 2**, **Enabled = true**,
+   **Transparency = 0**, **Color = 255, 220, 70**으로 둡니다. Camera와 WorldModel을
+   다른 객체로 교체하지 마세요.
+5. Workspace의 원본 Sample_RedBlock **Color만 70, 220, 90**으로 변경합니다.
+   직접 갱신하기 전에는 기존 카드가 빨간색으로 남아 있어야 합니다.
+   Sample_RedBlock_Viewport 한 개만 선택하고 **Load settings from selected frame →
+   Regenerate selected frame only**를 실행합니다. 초록 블록을 확인하고 옆의 파란 카드,
+   두 카드의 위치·크기, 빨간 카드의 LayoutOrder와 KeepStroke가 유지되는지 확인합니다.
+6. Studio **Edit → Undo**로 빨간 카드를, **Redo**로 초록 카드를 비교합니다.
+   각 단계에서 옆 카드와 테두리도 확인합니다. 별도 로컬 place로 저장한 뒤 닫고 다시
+   엽니다. CurrentCamera가 비어 있더라도 PreviewCamera/PreviewWorld를 유지합니다.
+   빨간 카드에서 설정 불러오기와 개별 갱신을 다시 실행해 결과를 확인합니다.
+   오류가 나오면 중단하고 안내를 읽어 주세요.
+7. **Play**에서 두 카드가 게임 UI에 나란히 표시되는지, 선택한 빨강/초록 상태와
+   파란 옆 카드·테두리가 유지되는지 확인합니다. 플러그인을 다시 사용하기 전에
+   Play를 중지하세요. 복구에는 백업을 사용하고 성공 보고서만으로 최종 화면이
+   올바르다고 가정하지 마세요.
 
 ### 첫 배치 생성
 
