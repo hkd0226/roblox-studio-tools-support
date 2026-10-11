@@ -38,7 +38,7 @@ If the plugin button is missing, confirm that the plugin is installed and enable
 ### 문 회전 검사
 
 1. 문 Model 하나를 선택하고 Model pivot을 경첩 위치에 맞춥니다.
-2. **−170~−1도 또는 1~170도**를 입력합니다. 0도는 지원하지 않습니다.
+2. **−170도부터 −1도까지 또는 1도부터 170도까지**를 입력합니다. 0도는 지원하지 않습니다.
 3. **Preview scan parameters → Scan selected door swing**을 실행합니다.
 4. 결과 행을 눌러 Studio에서 후보 객체를 선택·확인합니다.
 
