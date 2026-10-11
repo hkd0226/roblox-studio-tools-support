@@ -1,8 +1,8 @@
 # Door & Passage Check 0.1.0 — Customer guide / 사용 안내
 
-Release status: preparation and verification are in progress. This guide is not a Roblox sale or upload receipt. The plugin installation file is not distributed by this documentation repository. Confirm availability, version and price on the Roblox product listing when it is published.
+Use this guide with **Door & Passage Check 0.1.0**. Confirm availability, version and price on its Roblox product listing. This repository provides documentation and a separate customer example; it does not distribute the plugin installation file.
 
-현재 상품 검수·게시 준비 중입니다. 이 문서는 Roblox 업로드·판매 완료 증빙이 아닙니다. 이 저장소에서는 플러그인 설치 파일을 배포하지 않습니다. 게시된 Roblox 상품 페이지에서 판매 여부·버전·가격을 확인하세요.
+**Door & Passage Check 0.1.0**용 사용 안내입니다. Roblox 상품 페이지에서 판매 여부·버전·가격을 확인하세요. 이 저장소는 사용 문서와 별도 고객 예제를 제공하며 플러그인 설치 파일을 배포하지 않습니다.
 
 ## English
 
