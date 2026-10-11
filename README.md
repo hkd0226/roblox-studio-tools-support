@@ -1,6 +1,24 @@
 # Roblox Studio Tools — Support / 사용 안내 및 문의
 
-Customer documentation for the two Roblox Studio plugins by **hkd0226**.
+Customer guides and tested examples for Roblox Studio plugins by **hkd0226**.
+
+## Product guides and tested examples / 제품별 가이드·검수 예제
+
+Choose the guide for your installed product/version. Price, availability and installation are controlled by the linked Roblox listing. Example places are separate from the paid plugins: download a copy, save your project, then open the example in Studio. They are not installed automatically.
+
+설치한 제품과 버전에 맞는 가이드를 선택하세요. 가격·판매 여부·플러그인 설치는 Roblox 상품 페이지에서 확인합니다. 예제 place는 유료 플러그인과 별도입니다. 사본을 내려받고 작업을 저장한 뒤 Studio에서 열어 주세요. 자동 설치되거나 현재 프로젝트에 병합되지 않습니다.
+
+| Product / 제품 | Guide / 가이드 | Tested example / 검수 예제 | Roblox |
+| --- | --- | --- | --- |
+| Clearance Check 0.2.0 | [English / 한국어](./clearance-check-0.2.0.md) | Built-in example instructions in guide / 가이드의 내장 예제 순서 | [Product page](https://create.roblox.com/store/asset/132141689341950/Clearance-Check-Door-and-Passage) |
+| Viewport Batch Builder 0.2.0 | [English / 한국어](./viewport-batch-builder-0.2.0.md) | Manual source and UI setup in guide / 가이드의 원본·UI 준비 순서 | [Product page](https://create.roblox.com/store/asset/71263242408985/Viewport-Batch-Builder) |
+| D1 Connector Audit 0.1.0 | [Customer guide](./d1-connector-audit-0.1.0.md) | [10-joint script-free place](./D1-10Joint-Customer-Source0.rbxlx) · [open instructions](./D1-Example-Delivery-README.md) | [Product page](https://create.roblox.com/store/asset/132316175901064/D1-Connector-Audit) |
+| PRR Role Audit 0.1.0 | [English / 한국어](./prr-role-audit-0.1.0.md) | [12-Part script-free place](./PRR-12Case-Customer-Source0.rbxl) | [Product page](https://create.roblox.com/store/asset/135277121017733/PRR-Role-Audit) |
+| Weld Reference Audit 0.1.0 | [Customer quickstart](./weld-reference-audit-0.1.0-quickstart.txt) | [12-case script-free place](./WRA-12Case-Customer-Source0.rbxl) | [Product page](https://create.roblox.com/store/asset/130543397652816/Weld-Reference-Audit) |
+
+The examples and reports show the bounded checks described in each guide; they do not certify physics, player access, performance or purchase completion. Keep the delivery original unchanged when trying edits.
+
+예제와 보고서는 각 가이드에 명시한 범위의 검사입니다. 물리 동작·플레이어 통과·성능·구매 성공을 인증하지 않습니다. 수정 실험에는 사본을 사용해 배포 원본을 보존하세요.
 
 ## Current release: 0.2.0 / 현재 출시판: 0.2.0
 
