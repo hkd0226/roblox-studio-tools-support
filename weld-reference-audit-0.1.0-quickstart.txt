@@ -1,0 +1,27 @@
+Weld Reference Audit v0.1.0 - customer quickstart
+
+Purpose
+Review existing WeldConstraint Part0/Part1 references before you edit a selected Workspace scope. The tool reads project objects and changes editor selection only. It does not create, repair, delete or certify welds.
+
+Setup and use
+1. Install the plugin in Roblox Studio. Use Edit mode; stop Play or Run before scanning.
+2. Open Plugins > Weld Reference. If the panel is narrow, use its vertical scrollbars; Studio manages docking and width. The outer scrollbar reaches the report and limits; the Results and Complete report areas each have their own scrollbar.
+3. In Explorer select Workspace Models, Folders, Parts or WeldConstraints. Overlapping selected roots are deduplicated. Unsupported or outside-Workspace roots are rejected.
+4. Click Scan selected. Read the summary and each reference observation.
+5. Select constraint / Select Part0 / Select Part1 navigates to the actual object. Missing endpoints have an unavailable button. Paths may repeat; rows retain actual Instance identities. If a target moves or is removed, rescan before navigating.
+6. Scroll the outer panel to Complete report. Click inside the read-only report, then Ctrl+A and Ctrl+C to copy the full report into your own notes. The report is a snapshot; rescan after edits.
+7. Clear snapshot removes displayed results only. It does not remove project objects.
+
+Interpretation
+Missing Part0, missing Part1, identical endpoints and endpoints outside Workspace are reference-review observations. Disabled constraints, repeated unordered pairs and endpoints outside the selected scope are information. They are not correctness failures. REFERENCES_PRESENT does not establish a physically valid assembly.
+
+Boundaries
+Maximum 200 WeldConstraints and 5,000 selected-scope objects. Limit violations do not return a partial successful audit. No Motor6D, legacy Weld or other constraint classes; no runtime replication, movement, collision, physics or performance certification. Studio Properties is a capable free option for individual constraints. No claimed time savings or verified market demand.
+
+Customer example
+WRA-12Case-Customer-Source0.rbxl is the immutable Studio-tested 12-case example. It contains zero game LuaSourceContainers. Open a copy of it, select Workspace.WRA_ReferenceDemo, then Scan selected. Expected snapshot: 12 constraints, 5 reference-review rows, 1 disabled constraint and 1 repeated-pair group. The full report has 3,884 characters for this exact fixture. It includes missing endpoints, same endpoints, disabled information, reversed repeated pairs, outside-selection information, outside-Workspace review and duplicate-name objects. Do not modify the delivery original when trying edits or Undo/Redo.
+
+Support
+Primary: hkd0226@gmail.com
+Secondary: hkd0226@hanmail.net
+Include Studio version, plugin version, selected object classes, steps and a minimal non-sensitive example. Avoid sending private game scripts or account credentials. No response time is promised.
