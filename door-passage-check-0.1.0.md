@@ -54,6 +54,18 @@ If the plugin button is missing, confirm that the plugin is installed and enable
 
 버튼이 없으면 플러그인의 설치·활성화를 확인하세요. 각도·크기 오류는 입력을 고친 후 다시 검사합니다. 결과가 예상과 다르면 선택 객체, pivot, 크기와 충돌 설정을 확인하세요.
 
+## Tested customer example / 검수 예제
+
+[Download or view DPC-Customer-Source0-0.1.0.rbxl](./DPC-Customer-Source0-0.1.0.rbxl). Save a copy and open it with **File → Open** in Studio after saving your current project. This place is separate from the plugin and contains no Script, LocalScript or ModuleScript instances. It does not install the plugin automatically.
+
+SHA-256: `65f5f82ec2ccad0a46887fa54bd02a6b18b5d0cfd17930beb9539625570bdbbf`.
+
+The exact file was reopened and checked after a full Studio restart on **2026-10-12 KST**. Select **Workspace.Part**. At **90 degrees**, the preview showed **7 samples** for bounds **4 × 1 × 2**, and the swing scan reported **Workspace.SpawnLocation** near 90 degrees. Passage input **8, 10, 6** returned **Baseplate** and **SpawnLocation** as overlap candidates. This centered-Part example demonstrates bounds queries; it is not a real hinged-door or avatar movement certification.
+
+[고객 예제 받기](./DPC-Customer-Source0-0.1.0.rbxl). 현재 작업을 저장한 뒤 예제 사본을 내려받고 Studio의 **File → Open**으로 엽니다. 이 place는 플러그인과 별도이며 Script·LocalScript·ModuleScript 객체를 포함하지 않습니다. 플러그인이 자동 설치되지는 않습니다.
+
+**2026-10-12 KST**에 위 해시와 같은 파일을 Studio 전체 재시작 후 열어 확인했습니다. **Workspace.Part**를 선택하고 **90도**를 입력하면 크기 **4 × 1 × 2**에 대해 미리보기 **7개 표본**, 회전 검사 후보 **SpawnLocation**이 관찰됐습니다. 통로 입력 **8, 10, 6**은 **Baseplate·SpawnLocation** 후보를 반환했습니다. 중심 pivot의 Part로 경계 쿼리를 보여 주는 예제이며 실제 경첩이나 아바타 통과 검증은 아닙니다.
+
 ## Support / 문의
 
 Email: **hkd0226@gmail.com** (backup: **hkd0226@hanmail.net**). Public bug reports: [repository Issues](https://github.com/hkd0226/roblox-studio-tools-support/issues). Include the product/version, Studio version, reproduction steps, expected and actual results, and exact error text. Do not include passwords, tokens or private project files. No fixed response time is promised.

@@ -15,7 +15,7 @@ Choose the guide for your installed product/version. Price, availability and ins
 | D1 Connector Audit 0.1.0 | [Customer guide](./d1-connector-audit-0.1.0.md) | [10-joint script-free place](./D1-10Joint-Customer-Source0.rbxlx) · [open instructions](./D1-Example-Delivery-README.md) | [Product page](https://create.roblox.com/store/asset/132316175901064/D1-Connector-Audit) |
 | PRR Role Audit 0.1.0 | [English / 한국어](./prr-role-audit-0.1.0.md) | [12-Part script-free place](./PRR-12Case-Customer-Source0.rbxl) | [Product page](https://create.roblox.com/store/asset/135277121017733/PRR-Role-Audit) |
 | Weld Reference Audit 0.1.0 | [Customer quickstart](./weld-reference-audit-0.1.0-quickstart.txt) | [12-case script-free place](./WRA-12Case-Customer-Source0.rbxl) | [Product page](https://create.roblox.com/store/asset/130543397652816/Weld-Reference-Audit) |
-| Door & Passage Check 0.1.0 (preparation / 게시 준비) | [English / 한국어](./door-passage-check-0.1.0.md) | Customer example delivery verification pending / 고객 예제 전달 검증 중 | Not yet published / 미게시 |
+| Door & Passage Check 0.1.0 (preparation / 게시 준비) | [English / 한국어](./door-passage-check-0.1.0.md) | [Script-free tested place](./DPC-Customer-Source0-0.1.0.rbxl) / 스크립트 없는 검수 예제 | Not yet published / 미게시 |
 
 The examples and reports show the bounded checks described in each guide; they do not certify physics, player access, performance or purchase completion. Keep the delivery original unchanged when trying edits.
 
