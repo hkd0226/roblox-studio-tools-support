@@ -16,6 +16,8 @@ Choose the guide for your installed product/version. Price, availability and ins
 | PRR Role Audit 0.1.0 | [English / 한국어](./prr-role-audit-0.1.0.md) | [12-Part script-free place](./PRR-12Case-Customer-Source0.rbxl) | [Product page](https://create.roblox.com/store/asset/135277121017733/PRR-Role-Audit) |
 | Weld Reference Audit 0.1.0 | [Customer quickstart](./weld-reference-audit-0.1.0-quickstart.txt) | [12-case script-free place](./WRA-12Case-Customer-Source0.rbxl) | [Product page](https://create.roblox.com/store/asset/130543397652816/Weld-Reference-Audit) |
 
+| Door & Passage Check 0.1.0 (preparation / 게시 준비) | [English / 한국어](./door-passage-check-0.1.0.md) | Customer example delivery verification pending / 고객 예제 전달 검증 중 | Not yet published / 미게시 |
+
 The examples and reports show the bounded checks described in each guide; they do not certify physics, player access, performance or purchase completion. Keep the delivery original unchanged when trying edits.
 
 예제와 보고서는 각 가이드에 명시한 범위의 검사입니다. 물리 동작·플레이어 통과·성능·구매 성공을 인증하지 않습니다. 수정 실험에는 사본을 사용해 배포 원본을 보존하세요.
